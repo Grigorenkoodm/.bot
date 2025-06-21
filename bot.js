@@ -1,6 +1,6 @@
 const { Telegraf } = require('telegraf')
 
-const bot = new Telegraf('7905838100:AAEblCmit9ifkpKBXi8n8bxvB68Miu4CbtY')
+const bot = new Telegraf(process.env.BOT_API)
 bot.start((ctx) => ctx.reply('Welcome'))
 bot.on('message', (ctx)=>{
     if(ctx.message.location){
